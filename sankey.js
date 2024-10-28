@@ -18,7 +18,7 @@ import { layer, getSVG } from "@gramex/chartbase";
  */
 export function sankey(
   el,
-  { data, width, height, categories, size, text = "key", labelWidth, gap, d3 = globalThis.d3 }
+  { data, width, height, categories, size = () => 1, text = "key", labelWidth, gap, d3 = globalThis.d3 }
 ) {
   // If el is already a D3 element, use it (with it's version of D3). Else use the provided D3
   ({ el, width, height } = getSVG(el._groups ? el.node() : el, width, height));
@@ -118,7 +118,7 @@ export function sankey(
     .attr("height", categoryHeight)
     .on("click.sankey", (_, d) => {
       const links = linkData.filter((link) => link.source === d || link.target === d);
-      const show = !links.some((link) => linksLayer.filter((x) => x === link).classed("show"));
+      const show = !links.every((link) => linksLayer.filter((x) => x === link).classed("show"));
       linksLayer.filter((link) => links.includes(link)).classed("show", show);
     });
 

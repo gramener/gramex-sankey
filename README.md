@@ -63,6 +63,8 @@ Use via CDN as a script:
 
 ## Release notes
 
+- 1.1.0: 28 Oct 2024.
+  - Clicking a node first shows all nodes if any are missing. (Earlier it would HIDE if any were present.)
 - 1.0.0: 28 Oct 2024. Initial release
 
 ## Authors
