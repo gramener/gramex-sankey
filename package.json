@@ -1,0 +1,42 @@
+{
+  "name": "@gramex/sankey",
+  "version": "1.0.0",
+  "description": "A Sankey (or flow) diagram for graph visualization.",
+  "module": "dist/sankey.js",
+  "main": "dist/sankey.min.js",
+  "scripts": {
+    "docs": "npx -y documentation build sankey.js --markdown-toc false -f md | npx -y prettier --parser markdown > docs/api.md",
+    "watch": "npx -y esbuild sankey.js --format=esm --bundle --minify --allow-overwrite --sourcemap --outdir=dist --watch",
+    "build-browser": "npx -y esbuild sankey.js --format=iife --global-name=gramex --bundle --minify --allow-overwrite --sourcemap --outdir=dist",
+    "build-esm": "npx -y esbuild sankey.js --format=esm --bundle --minify --allow-overwrite --sourcemap --outdir=dist",
+    "build": "npm run build-browser && npm run build-esm",
+    "prepublishOnly": "npm run docs && npm run build"
+  },
+  "files": [
+    "README.md",
+    "dist/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gramener/gramex-sankey"
+  },
+  "keywords": [
+    "gramex",
+    "sankey",
+    "choropleth",
+    "map"
+  ],
+  "author": "S Anand <s.anand@gramener.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gramener/gramex-sankey/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "https://gramener.github.io/gramex-sankey/",
+  "devDependencies": {
+    "@gramex/chartbase": "^1.0.2"
+  }
+}

@@ -1,0 +1,56 @@
+channel,city,product,sales,prev
+Online,Tokyo,Biscuit,866.1,1186.4
+Online,Tokyo,Cake,26.4,34.8
+Online,Tokyo,Cream,38.3,54
+Online,Tokyo,Eggs,513.7,579.1
+Online,Delhi,Biscuit,41.9,70.1
+Online,Delhi,Cake,52.2,49.1
+Online,Delhi,Cream,17.8,18.8
+Online,Delhi,Eggs,178.9,242.1
+Online,Shanghai,Biscuit,217.4,195.2
+Online,Shanghai,Cake,,
+Online,Shanghai,Cream,94.4,132.6
+Online,Shanghai,Eggs,72.8,77.9
+Online,Sao Paulo,Biscuit,671,680.5
+Online,Sao Paulo,Cake,560.2,697.6
+Online,Sao Paulo,Cream,237.9,199.2
+Online,Sao Paulo,Eggs,719,643.1
+Online,Dhaka,Biscuit,18.3,21.6
+Online,Dhaka,Cake,41.6,39.9
+Online,Dhaka,Cream,32.4,30.3
+Online,Dhaka,Eggs,12.5,11.5
+Online,Cairo,Biscuit,1352.4,977.2
+Online,Cairo,Cake,190.2,170
+Online,Cairo,Cream,148.2,140.7
+Online,Cairo,Eggs,,
+Retail,Tokyo,Biscuit,37.4,44.5
+Retail,Tokyo,Cake,95.2,163.3
+Retail,Delhi,Biscuit,38.6,33.9
+Retail,Delhi,Cake,46.2,83.4
+Retail,Delhi,Cream,83.3,115.5
+Retail,Delhi,Eggs,114.7,127.9
+Retail,Shanghai,Biscuit,24.6,47.2
+Retail,Shanghai,Eggs,39.1,59.9
+Retail,Sao Paulo,Biscuit,36.9,47.9
+Retail,Sao Paulo,Cake,21.1,27.3
+Retail,Sao Paulo,Cream,21.6,23
+Retail,Sao Paulo,Eggs,25,21.5
+Retail,Dhaka,Biscuit,123.3,110.7
+Retail,Dhaka,Cake,49.4,33.3
+Retail,Dhaka,Eggs,26.7,52
+Retail,Cairo,Biscuit,103.2,132.6
+Retail,Cairo,Cake,76,82.7
+Partner,Tokyo,Biscuit,27.7,
+Partner,Tokyo,Cake,23.7,47.1
+Partner,Tokyo,Cream,43.1,70.2
+Partner,Tokyo,Eggs,,
+Partner,Delhi,Biscuit,54.6,37.7
+Partner,Delhi,Cake,21,18.2
+Partner,Delhi,Cream,21,20.3
+Partner,Shanghai,Cake,117.1,90.4
+Partner,Shanghai,Cream,48.2,41.3
+Partner,Shanghai,Eggs,,
+Partner,Cairo,Biscuit,128.8,138.9
+Partner,Cairo,Cake,68.8,48.9
+Partner,Cairo,Cream,42,66.9
+Partner,Cairo,Eggs,113.5,95.2
