@@ -1,6 +1,6 @@
 {
   "name": "@gramex/sankey",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Sankey (or flow) diagram for graph visualization.",
   "module": "dist/sankey.js",
   "main": "dist/sankey.min.js",

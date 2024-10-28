@@ -1,4 +1,17 @@
-<svg id="sankey" width="800" height="400"></svg>
+<svg id="sankey" width="800" height="300"></svg>
+
+<style>
+  #sankey .node, #sankey .link {
+    stroke: white;
+    stroke-width: 1px;
+  }
+  #sankey .link {
+    opacity: 0.05;
+  }
+  #sankey .link.show {
+    opacity: 1;
+  }
+</style>
 
 <script type="module">
   import { sankey } from "../dist/sankey.js";
@@ -9,8 +22,7 @@
 
   // Create the sankey
   const graph = sankey("#sankey", {
-    data: data,
-    labelWidth: 60,
+    data,
     categories: { Channel: "channel", City: "city", Product: "product" },
     size: "sales",
     d3,
