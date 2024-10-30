@@ -91,7 +91,7 @@ const graph = sankey("#sankey", {
 });
 ```
 
-[![Example](https://raw.githubusercontent.com/gramener/gramex-sankey/main/docs/simple.png)](docs/simple.html ":include height=320px")
+[![Example](https://raw.githubusercontent.com/gramener/gramex-sankey/main/docs/simple.webp)](docs/simple.html ":include height=320px")
 
 [See how to use sankey()](docs/simple.html ":include :type=code")
 
@@ -161,7 +161,7 @@ The generated SVG has the following structure:
 </svg>
 ```
 
-[![Example](https://raw.githubusercontent.com/gramener/gramex-sankey/main/docs/style.png)](docs/style.html ":include height=320px")
+[![Example](https://raw.githubusercontent.com/gramener/gramex-sankey/main/docs/style.webp)](docs/style.html ":include height=320px")
 
 [See how to style nodes and links](docs/style.html ":include :type=code")
 
@@ -172,7 +172,7 @@ You can use [Bootstrap tooltips](https://getbootstrap.com/docs/5.3/components/to
 1. Add a `data-bs-toggle="tooltip" title="..."` attribute to each feature using `update`
 2. Call `new bootstrap.Tooltip(element, {selector: '[data-bs-toggle="tooltip"]'})` to initialize tooltips
 
-[![Example](https://raw.githubusercontent.com/gramener/gramex-sankey/main/docs/tooltip.png)](docs/tooltip.html ":include height=320px")
+[![Example](https://raw.githubusercontent.com/gramener/gramex-sankey/main/docs/tooltip.webp)](docs/tooltip.html ":include height=320px")
 
 [See how to add tooltips](docs/tooltip.html ":include :type=code")
 
