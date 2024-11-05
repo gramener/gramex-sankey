@@ -99,8 +99,6 @@ const graph = sankey("#sankey", {
 
 Sankey accepts the following inputs options:
 
-- `labelWidth`: Width of the category labels on the left
-- `gap`: Vertical gap between boxes as a % of the box height. 0.5 (default) means half the space is used by the gaps.
 - `size`: Box width key or function. Defaults to `d => 1`, i.e. each row counts as 1. Use `"sales"` or `d => d.sales` to use a `sales` column as the box size.
 - `text`: Box label key or function. Defaults to `"key"`. Use `d => d.key.toUpperCase()` to display the category key in uppercase.
 
@@ -164,6 +162,51 @@ The generated SVG has the following structure:
 [![Example](https://raw.githubusercontent.com/gramener/gramex-sankey/main/docs/style.webp)](docs/style.html ":include height=320px")
 
 [See how to style nodes and links](docs/style.html ":include :type=code")
+
+## Layout
+
+The Sankey diagram accepts these sizing options:
+
+- `width`: SVG width in pixels. Defaults to the SVG container width
+- `height`: SVG height in pixels. Defaults to the SVG container height
+- `labelWidth`: Width of category labels on the left. Defaults to 10% of width with a max of 100px
+- `gap`: Vertical gap between boxes (0-1). Default: 0.5 means half the space is gaps
+
+```js
+const graph = sankey("#sankey", {
+  data,
+  categories: { Channel: "channel", City: "city", Product: "product" },
+  size: "sales",
+  width: 600, // Less width than before
+  height: 200, // Less height than before
+  labelWidth: 60, // Channel, City, etc occupy less width
+  gap: 0.8, // More vertical space between
+  d3,
+});
+```
+
+[![Example](docs/layout.webp)](docs/layout.html ":include height=320px")
+
+[See how to layout](docs/layout.html ":include :type=code")
+
+## Style text
+
+Style text labels using D3 selections:
+
+```js
+// Text labels on top of the boxes are large, white, and uppercase
+graph.texts
+  .attr("font-size", "20px")
+  .attr("fill", "white")
+  .text((d) => d.key.toUpperCase());
+
+// Category labels on the left are bold and large
+graph.labels.attr("font-weight", "bold").attr("font-size", "20px");
+```
+
+[![Example](docs/style-text.webp)](docs/style-text.html ":include height=320px")
+
+[See how to style text and labels](docs/style-text.html ":include :type=code")
 
 ## Add tooltips
 

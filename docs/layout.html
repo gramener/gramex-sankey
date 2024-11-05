@@ -1,0 +1,21 @@
+<svg id="sankey" width="600" height="200"></svg>
+
+<script type="module">
+  import { sankey } from "../dist/sankey.js";
+  import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+
+  const data = await fetch("sales.json").then((r) => r.json());
+  const graph = sankey("#sankey", {
+    data,
+    categories: { Channel: "channel", City: "city", Product: "product" },
+    size: "sales",
+    width: 600,
+    height: 200,
+    labelWidth: 60, // Channel, City, etc occupy less width
+    gap: 0.8, // More vertical space between
+    d3,
+  });
+
+  graph.nodes.attr("fill", d3.scaleOrdinal(d3.schemeCategory10));
+  graph.links.attr("fill", "rgba(0,0,0,0.2)");
+</script>
